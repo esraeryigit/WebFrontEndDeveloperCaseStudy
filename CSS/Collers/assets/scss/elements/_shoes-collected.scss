@@ -1,0 +1,112 @@
+.shoes_collected {
+    background-color: #78350f;
+    margin: 0;
+    overflow: hidden;
+    .wrapper {
+        position: relative;
+    }
+    .text {
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        transform: translate(50%, -50%);
+        z-index: 1;
+        color: white;
+        text-align: center;
+        h1 {
+            font-size: 96px;
+            font-weight: 800;
+        }
+        h3 {
+            font-size: 56px;
+            font-weight: 800;
+        }
+    }
+    .chart {
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .ellipse {
+            left: 18%;
+            top: 35%;
+            position: absolute;
+            z-index: 2;
+            &::after {
+                content: "";
+                position: absolute;
+                outline: 3px solid #d9f99d;
+                background-color: #a3e635;
+                width: 32px;
+                height: 32px;
+                display: block;
+                border-radius: 50%;
+                left: -50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    .product_item {
+        position: absolute;
+        z-index: 1;
+        bottom: -12px;
+        left: -50%;
+        transform: translateX(-50%);
+        width: 225px;
+        .image {
+            border-radius: 10px;
+            border: 4px solid white;
+            position: relative;
+            z-index: 1;
+            img {
+                width: 100%;
+            }
+        }
+        &::after {
+            content: "";
+            width: 12px;
+            height: 6px;
+            display: block;
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url(../images/arrow-bottom01.svg);
+        }
+        .details {
+            background-color: #e2e8f0;
+            padding: 16px;
+            padding-bottom: 8px;
+            margin: 0 10px;
+            margin-top: -6px;
+            border-radius: 5px;
+            box-shadow:
+                0px 0px 15px 0px rgba(0, 0, 0, 0.07),
+                0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+            p {
+                font-size: 14px;
+                font-weight: 400;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .shoes_collected {
+        padding-top: 80px;
+        .chart {
+            min-width: 300%;
+        }
+        .text {
+            top: 54%;
+            h1 {
+                font-size: 48px;
+            }
+            h3 {
+                font-size: 32px;
+            }
+        }
+    }
+}

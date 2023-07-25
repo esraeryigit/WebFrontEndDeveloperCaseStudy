@@ -1,0 +1,132 @@
+.why_join_us {
+    overflow: hidden;
+    margin: 0;
+    padding: 160px 80px;
+    .row {
+        background-color: white;
+        box-shadow:
+            0px 0px 10px 0px rgba(0, 0, 0, 0.07),
+            0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        padding: 70px 50px;
+        position: relative;
+        &::after {
+            content: "";
+            background-image: url(../images/Deco-video.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            right: -30px;
+            top: -50px;
+            bottom: -114px;
+            width: 57%;
+        }
+        > * {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .content {
+        h1{
+            font-weight: 800;
+        }
+        .primary_btn {
+            color: var(--brown);
+            border-color: var(--brown);
+        }
+    }
+    .list {
+        margin-bottom: 20px;
+        li {
+            padding: 4px 0;
+            &::before {
+                content: "";
+                width: 20px;
+                height: 20px;
+                flex-shrink: 0;
+                margin-right: 5px;
+                display: inline-block;
+                vertical-align: sub;
+                background-image: url(../images/check.svg);
+                background-position: center;
+            }
+        }
+    }
+    .video_box {
+        &::after {
+            width: 85px;
+            height: 85px;
+            content: "";
+            position: absolute;
+            left: 50px;
+            bottom: -40px;
+            border-radius: 50%;
+            background-color: #15803D;
+            opacity: .75;
+        }
+    }
+}
+.video_box {
+    background-color: white;
+    box-shadow:
+        0px 0px 15px 0px rgba(0, 0, 0, 0.07),
+        0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    position: relative;
+    height: fit-content;
+    .top_bar {
+        padding: 16px 20px;
+        svg {
+            display: block;
+            margin-right: auto;
+        }
+    }
+    .image {
+        padding: 5px;
+        padding-top: 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 100%;
+            border-radius: 0 0 16px 16px;
+        }
+    }
+    .play_btn {
+        position: absolute;
+        max-width: 26%;
+        transition: 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        svg {
+            display: block;
+            width: 100%;
+        }
+        &:active {
+            transform: scale(0.85);
+        }
+    }
+}
+@media (max-width: 991px) {
+    .why_join_us {
+        padding: 30px 0 50px;
+        .content {
+            margin-bottom: 32px;
+            text-align: center;
+            .list {
+                text-align: left;
+            }
+        }
+        .row {
+            padding: 10px;
+            &::after {
+                height: 64%;
+                bottom: -56px;
+                width: auto;
+                left: -15px;
+                right: -76px;
+                top: auto;
+            
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://cdnik.baykartech.com/media/images/contents/hr-logo.png"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <title>Online Quiz</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center mt-5 mb-5">
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="card-body m-2">
+              <h2 class="card-title text-center mb-4">Online Quiz</h2>
+              <p class="card-text">
+                Hello! Welcome! In this online quiz, pay attention to the
+                following rules:
+              </p>
+              <ul class="card-text">
+                <li>The quiz consists of 10 questions in total.</li>
+                <li>There is only one correct answer for each question.</li>
+                <li>
+                  You can change the answer to the question you have answered,
+                  but you cannot change it after the time has expired.
+                </li>
+                <li>
+                  Answer options will not be able to be clicked in the first 10
+                  seconds and will be clickable after the 10th second.
+                </li>
+                <li>
+                  You have 30 seconds for each question. Use your time
+                  carefully.
+                </li>
+                <li>You cannot go back to past questions.</li>
+                <li>
+                  At the end of the quiz, your answers will be shown as a table.
+                </li>
+              </ul>
+              <p class="card-text">
+                Before starting the quiz, create a calm environment for
+                yourself.
+              </p>
+              <p class="card-text">
+                Select the user id given to you from the list, then you can
+                start the quiz.
+              </p>
+              <p class="card-text">We wish you luck!</p>
+              <div class="id-select-area">
+                <label for="exampleFormControlSelect1">ID:</label>
+                <select
+                  class="form-control"
+                  style="max-width: 45px"
+                  id="id-controller"
+                >
+                  <option value="1" selected="true">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="text-center">
+                <a class="btn btn-primary btn-lg" id="start-quiz">Start Quiz</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelector("#start-quiz").addEventListener("click", () => {
+        let id = document.querySelector("#id-controller").value;
+        window.location.replace("./quiz.html?id=" + id);
+      });
+    </script>
+
+    <!-- Bootstrap JS (Popper.js ve Bootstrap JavaScript) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

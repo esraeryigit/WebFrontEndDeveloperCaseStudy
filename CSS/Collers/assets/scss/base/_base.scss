@@ -1,0 +1,92 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: var(--gradient);
+    color: var(--body-color);
+}
+
+@media (max-width: 991px) {
+    body {
+        background: white;
+    }
+}
+body.overflow_hidden {
+    overflow: hidden;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+u {
+    text-decoration: underline;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+    color: currentColor;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: transparent;
+    border: unset;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    margin: 50px 0;
+}
+
+h1 {
+    font-size: 56px;
+}
+p {
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+}

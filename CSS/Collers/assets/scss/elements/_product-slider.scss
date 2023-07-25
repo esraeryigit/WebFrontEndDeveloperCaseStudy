@@ -1,0 +1,101 @@
+.product_slider {
+    background-color: var(--body-color);
+    color: white;
+    margin: 0;
+    padding: 80px 0;
+    overflow: hidden;
+    .sec_title {
+        padding-bottom: 80px;
+        .primary_btn {
+            border-color: white;
+        }
+    }
+    .container {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: -10px;
+            right: -15px;
+            bottom: -32px;
+            margin: 0 auto;
+            background-image: url(../images/backlights.svg);
+            aspect-ratio: 13.4/5.2;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        > * {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    .row {
+        margin-left: -24px;
+        margin-right: -24px;
+    }
+    .row > * {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+    .product_item {
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: var(--body-color);
+        box-shadow:
+                0px 0px 15px 0px rgba(255, 255, 255, 0.07),
+                0px 25px 50px -12px rgba(255, 255, 255, 0.25);
+        transition: 0.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+        .image {
+            display: block;
+            img {
+                display: block;
+            }
+        }
+        .details {
+            padding: 32px;
+            p {
+                margin-bottom: 26px;
+            }
+        }
+        .buyNow {
+            width: 100%;
+            border-color: white;
+            gap: 15px;
+        }
+    }
+}
+@media (max-width: 991px) {
+    .product_slider {
+        .product_item {
+            margin-bottom: 24px;
+        }
+    }
+}
+@media (max-width: 576px) {
+    .product_slider {
+        .product_item {
+            .details{
+                padding: 24px;
+            }
+        }
+        .container {
+            &::after {
+                left: 6px;
+                right: 6px;
+                bottom: -699px;
+                background-image: url(../images/backlights-mobile.svg);
+                aspect-ratio: 10/39;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .product_slider {
+        .container {
+            &::after {
+                bottom: -352px;
+            }
+        }
+    }
+}

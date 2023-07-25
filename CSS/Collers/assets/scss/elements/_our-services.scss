@@ -1,0 +1,32 @@
+.our_services {
+    padding-top: 80px;
+    margin: 0px 0 80px;
+    .item {
+        .icon {
+            display: inline-flex;
+            align-items: center;
+            height: 70px;
+            margin-bottom: 10px;
+        }
+        h5 {
+            margin-bottom: 12px;
+        }
+    }
+}
+@media (max-width:991px) {
+    .our_services {
+        padding-top: 0;
+
+    }
+}
+@media (max-width:768px) {
+    .our_services {
+        background-color: #FEF3C7;
+        margin-top: 48px;
+        margin-bottom: 0;
+        padding: 10px 0 50px;
+        .item {
+            text-align: center;
+        }
+    }
+}

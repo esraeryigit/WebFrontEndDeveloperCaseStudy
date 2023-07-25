@@ -1,0 +1,42 @@
+.sec_title {
+    padding-bottom: 38px;
+    h1 {
+        font-weight: 800;
+    }
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        margin-top: 32px;
+    }
+    .primary_btn {
+        font-size: 24px;
+    }
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 991px) {
+    .sec_title {
+        h1 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 16px;
+            margin-top: 16px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .sec_title {
+        h1 {
+            font-weight: 700;
+        }
+        .flex {
+            flex-direction: column;
+            gap: 14px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.primary_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    gap: 8px;
+    line-height: 1.4;
+    svg {
+        display: inline-block;
+        flex-shrink: 0;
+    }
+    &:hover {
+        background-color: rgba(124, 124, 124, 0.123);
+    }
+}

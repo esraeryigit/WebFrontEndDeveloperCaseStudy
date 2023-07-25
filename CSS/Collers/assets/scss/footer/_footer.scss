@@ -1,0 +1,115 @@
+.site_footer {
+    background-color: var(--body-color);
+    color: white;
+    .foot_main {
+        padding: 48px 0;
+        border-bottom: 1px solid #334155;
+    }
+    .foot_bottom {
+        padding: 24px 0;
+        .wrapper {
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    h5 {
+        font-size: 16px;
+        font-weight: 500;
+        padding: 12px 0;
+    }
+    .getApp {
+        h5 {
+            margin-bottom: 8px;
+        }
+        .app_links {
+            a {
+                display: block;
+                &:first-child {
+                    margin-bottom: 8px;
+                }
+                img {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .followUs {
+        margin-top: 48px;
+        h5 {
+            margin-bottom: 8px;
+        }
+        ul {
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+            a {
+                display: block;
+                transition: 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                svg {
+                    display: block;
+                }
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+    .menu {
+        ul {
+            li {
+                a {
+                    display: block;
+                    padding: 12px 0;
+                }
+            }
+        }
+    }
+    .right_menu {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 32px;
+
+        .language_select {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+    a {
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+@media (min-width: 991px) {
+    .site_footer .menu .title::after {
+        display: none;
+    }
+}
+@media (max-width: 991px) {
+    .site_footer {
+        text-align: center;
+        .menu {
+            margin-bottom: 48px;
+        }
+        .getApp {
+            .app_links {
+                a {
+                    &:first-child {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+        .foot_bottom {
+            padding: 48px 0;
+            .wrapper {
+                justify-content: center;
+                gap: 24px;
+            }
+        }
+    }
+}
